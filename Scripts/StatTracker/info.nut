@@ -1,13 +1,15 @@
-class FMainClass extends GSInfo {
+class InfoClass extends GSInfo {
 	function GetAuthor()		{ return "Master Hellish"; }
 	function GetName()			{ return "Stat Tracker"; }
-	function GetDescription() 	{ return "A simple script that tracks a number of statistics and logs them each year In the script log."; }
-	function GetVersion()		{ return 0; }
+	function GetDescription() {
+	    return "Tracks a number of statistics (vehicles, crashes (total, train, road, flood, planes) bankruptcies, mergers, towns, industries). Logs them each year/period in the AI/Game Script Debug log or news feed (if enabled)."
+	}
+	function GetVersion()		{ return 1; }
 	function GetDate()			{ return "2025/07/19"; }
 	function CreateInstance()	{ return "MainClass"; }
 	function GetShortName()		{ return "MHST"; }
 	function GetAPIVersion()	{ return "13"; }
-	function GetUrl()			{ return "https://masterhellish.net"; }
+	function GetURL()			{ return "https://github.com/MasterHellish/OpenTTDMods/tree/main/Scripts/StatTracker"; }
 
 	function GetSettings() {
 		AddSetting({
@@ -22,4 +24,4 @@ class FMainClass extends GSInfo {
 	}
 }
 
-RegisterGS(FMainClass());
+RegisterGS(InfoClass());
